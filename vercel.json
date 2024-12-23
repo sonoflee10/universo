@@ -1,12 +1,13 @@
 {
-  "version": 2,
   "functions": {
     "v/*.php": {
-      "runtime": "vercel-php@0.5.0"
+      "runtime": "vercel-php@0.5.1"
     }
   },
-  "routes": [
-    { "src": "/v/(.*)", "dest": "/v/$1" },
-    { "src": "/v/(.*)", "dest": "/v/index.html" }
+  "rewrites": [
+    {
+      "source": "/v/(.*)",
+      "destination": "/v/$1"
+    }
   ]
 }
